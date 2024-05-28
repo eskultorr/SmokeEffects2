@@ -1,0 +1,57 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color:rgb(34, 30, 30);
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section h2
+{
+    position: relative;
+    font-size: 6em;
+    text-transform: capitalize;
+    color: aliceblue;
+    z-index: 10000;
+    mix-blend-mode: overlay;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 0.5;
+    }
+    100%
+    {
+        opacity: 1;
+        mix-blend-mode:normal;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: red;
+    }
+}
+section video
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    object-fit: cover;
+}
